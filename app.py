@@ -2,8 +2,8 @@ from discord import Client as DiscordClient
 from aiohttp import ClientSession as HTTPClientSession
 from os import environ
 
-DISCORD_TOKEN = environ.DISCORD_TOKEN
-SEA_TOKEN = environ.SEA_TOKEN
+DISCORD_TOKEN = environ.get('DISCORD_TOKEN')
+SEA_TOKEN = environ.get('SEA_TOKEN')
 
 client = DiscordClient()
 async def send(message: str):
