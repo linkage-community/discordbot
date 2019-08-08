@@ -19,7 +19,7 @@ async def join_member(member_name, channel):
 async def leave_member(member_name, channel):
     await send('[{}] {} was left.'.format(channel, member_name))
 async def move_member(member_name, before_channel, after_channel):
-    await send('[{}] {} was moved from {}.'.format(after_channel, member_name, after_channel))
+    await send('[{}] {} was moved from {}.'.format(after_channel, member_name, before_channel))
 
 async def handle_channel_change(member, before_channel, after_channel):
     # block any case without changing channel
